@@ -12,7 +12,8 @@ const CropForm = () => {
         const cropData = { name, temperature, humidity };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/crops', cropData);
+            const response = await axios.post('https://ai-agriculture-backend.onrender.com'
+, cropData);
             console.log(response.data);
         } catch (error) {
             console.error('Error submitting crop data:', error);
